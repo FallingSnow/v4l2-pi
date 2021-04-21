@@ -1,5 +1,8 @@
 use anyhow::Result;
-use drm::{buffer::{Buffer, DrmFourcc, Handle, PlanarBuffer}, control::{self, Device, Mode, dumbbuffer::DumbBuffer, framebuffer}};
+use drm::{
+    buffer::{Buffer, DrmFourcc, Handle, PlanarBuffer},
+    control::{self, dumbbuffer::DumbBuffer, framebuffer, Mode},
+};
 use std::os::unix::io::RawFd;
 
 /// A simple wrapper for a device node.
@@ -94,14 +97,6 @@ pub fn get_framebuffer(
         handle: framebuffer,
         prime: prime_fd,
     })
-}
-
-pub fn prime_fd_to_buffer(
-    card: &Card,
-    prime: RawFd
-) -> Result<framebuffer::Handle> {
-    let handle = card.prime_fd_to_buffer(prime)?;
-    Ok(handle)
 }
 
 pub fn set_crtc(

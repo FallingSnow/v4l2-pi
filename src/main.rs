@@ -1,41 +1,47 @@
-use aho_corasick::AhoCorasick;
-use anyhow::{ensure, Result};
+use anyhow::Result;
+use io::{Read, Seek, SeekFrom};
 use std::fs::File;
-use std::io::{Read, Seek, SeekFrom};
+use std::io::{self, Write};
 use std::path::Path;
-use std::sync::{
-    atomic::{AtomicBool, AtomicUsize, Ordering},
-    Arc,
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::Arc;
+use std::time::Instant;
+
+use aho_corasick::AhoCorasick;
+use qbuf::{
+    get_free::{GetFreeCaptureBuffer, GetFreeOutputBuffer},
+    CaptureQueueable,
+};
+use v4l2r::{device::queue::qbuf::OutputQueueable, Format};
+use v4l2r::{
+    device::queue::*,
+    memory::{DmaBufHandle, MemoryType},
 };
 use v4l2r::{
-    decoder::{
-        stateful::{Decoder, GetBufferError},
-        DecoderEvent, FormatChangedReply,
-    },
     device::{
-        poller::PollError,
-        queue::handles_provider::{PooledHandles, PooledHandlesProvider},
-        queue::{direction::Capture, dqbuf::DqBuffer, FormatBuilder},
+        queue::generic::{GenericBufferHandles, GenericQBuffer, GenericSupportedMemoryType},
+        AllocatedQueue, Device, DeviceConfig, Stream, TryDequeue,
     },
-    memory::{DmaBufHandle, DmaBufferHandles, MemoryType, MmapHandle},
-    Format, QueueType, Rect,
+    memory::UserPtrHandle,
 };
 
 mod dmabuf;
 mod modesetting;
 
-const RENDER_DEVICE_PATH: &'static str = "/dev/dri/card1";
+const RENDER_DEVICE_PATH: &'static str = "/dev/dri/card0";
 const DECODE_DEVICE_PATH: &'static str = "/dev/video10";
 const VIDEO_FILE_PATH: &'static str = "/home/alarm/FPS_test_1080p60_L4.2.h264";
+const OUTPUT_MEM: MemoryType = MemoryType::Mmap;
 const CAPTURE_MEM: MemoryType = MemoryType::DmaBuf;
-const NUM_OUTPUT_BUFFERS: usize = 2;
-// const NUM_CAPTURE_BUFFERS: usize = 2;
-
-type PooledDmaBufHandlesProvider = PooledHandlesProvider<Vec<DmaBufHandle<File>>>;
+const NUM_OUTPUT_BUFFERS: u32 = 2;
+const NUM_CAPTURE_BUFFERS: u32 = 2;
 
 /// Run a sample encoder on device `device_path`, which must be a `vicodec`
 /// encoder instance. `lets_quit` will turn to true when Ctrl+C is pressed.
 pub fn main() -> Result<()> {
+    let h264_aud_pattern = AhoCorasick::new_auto_configured(&[[0, 0, 0, 1]]);
+    let decode_path = Path::new(DECODE_DEVICE_PATH);
+
     let lets_quit = Arc::new(AtomicBool::new(false));
     // Setup the Ctrl+c handler.
     {
@@ -46,174 +52,309 @@ pub fn main() -> Result<()> {
         .expect("Failed to set Ctrl-C handler.");
     }
 
-    let h264_aud_pattern = AhoCorasick::new_auto_configured(&[[0, 0, 0, 1]]);
-    let poll_count_reader = Arc::new(AtomicUsize::new(0));
-    let poll_count_writer = Arc::clone(&poll_count_reader);
-    let start_time = std::time::Instant::now();
-    let mut frame_counter = 0usize;
     // Open file for reading
     let mut file =
         File::open(VIDEO_FILE_PATH).expect(&format!("Failed to load {}", VIDEO_FILE_PATH));
-    let render_device = modesetting::Card::open(RENDER_DEVICE_PATH)
-        .expect(&format!("Unable to open {}", RENDER_DEVICE_PATH));
 
-    let mode =
-        modesetting::get_mode(&render_device).expect("Failed to get prefered framebuffer mode");
+    let device = Device::open(decode_path, DeviceConfig::new().non_blocking_dqbuf())
+        .expect("Failed to open device");
+    let caps = &device.capability;
+    println!(
+        "Opened device: {}\n\tdriver: {}\n\tbus: {}\n\tcapabilities: {}",
+        caps.card, caps.driver, caps.bus_info, caps.capabilities
+    );
+    // if caps.driver != "vicodec" {
+    //     panic!(
+    //         "This device is {}, but this test is designed to work with the vicodec driver.",
+    //         caps.driver
+    //     );
+    // }
 
-    let mut output_ready_cb =
-        move |mut cap_dqbuf: DqBuffer<Capture, PooledHandles<DmaBufferHandles<File>>>| {
-            let bytes_used = cap_dqbuf.data.get_first_plane().bytesused() as usize;
-            // Ignore zero-sized buffers.
-            if bytes_used == 0 {
-                return;
-            }
+    let device = Arc::new(device);
 
-            let elapsed = start_time.elapsed();
-            frame_counter += 1;
-            let fps = frame_counter as f32 / elapsed.as_millis() as f32 * 1000.0;
-            let ppf = poll_count_reader.load(Ordering::SeqCst) as f32 / frame_counter as f32;
-            print!(
-                "\rDecoded buffer {:#5}, index: {:#2}), bytes used:{:#6} fps: {:#5.2} ppf: {:#4.2}",
-                cap_dqbuf.data.sequence(),
-                cap_dqbuf.data.index(),
-                bytes_used,
-                fps,
-                ppf,
-            );
-            // std::io::stdout().flush().unwrap();
-
-            let pooled_handles = cap_dqbuf.take_handles().unwrap();
-            let _handles = pooled_handles.handles();
-        };
-
-    let decoder_event_cb =
-        move |event: DecoderEvent<PooledHandlesProvider<Vec<DmaBufHandle<File>>>>| match event {
-            DecoderEvent::FrameDecoded(dqbuf) => output_ready_cb(dqbuf),
-            DecoderEvent::EndOfStream => {
-                println!("End of stream!");
-                ()
-            },
-        };
-
-    let set_capture_format_cb =
-        move |f: FormatBuilder,
-              visible_rect: Rect,
-              min_num_buffers: usize|
-              -> anyhow::Result<FormatChangedReply<PooledDmaBufHandlesProvider>> {
-            let format = f.set_pixelformat(b"RGBP").apply()?;
-
-            println!(
-                "New CAPTURE format: {:?} (visible rect: {})",
-                format, visible_rect
-            );
-
-            let fb_prime_fds: Vec<i32> = (0..min_num_buffers)
-                .into_iter()
-                .map(|i| {
-                    let framebuffer = modesetting::get_framebuffer(&render_device, &mode, &format)
-                        .expect(&format!("Unable to allocate framebuffer {}", i));
-                    if i == 0 {
-                        modesetting::set_crtc(&render_device, Some(framebuffer.handle), Some(mode))
-                            .expect("Unable to set first framebuffer as current crtc");
-                    }
-
-                    framebuffer.prime
-                })
-                .collect();
-
-            let dmabuf_fds: Vec<Vec<_>> = dmabuf::register_dmabufs(
-                &Path::new(&DECODE_DEVICE_PATH),
-                QueueType::VideoCaptureMplane,
-                &format,
-                &fb_prime_fds,
-            )
-            .unwrap();
-
-            Ok(FormatChangedReply {
-                provider: PooledHandlesProvider::new(dmabuf_fds),
-                // TODO: can't the provider report the memory type that it is
-                // actually serving itself?
-                mem_type: CAPTURE_MEM,
-                num_buffers: min_num_buffers,
-            })
-        };
-
-    let input_done_cb = |_input_buffer| {
-        // println!("Input done");
-        ()
+    // Obtain the queues, depending on whether we are using the single or multi planar API.
+    let (mut output_queue, mut capture_queue, use_multi_planar) = if let Ok(output_queue) =
+        Queue::get_output_queue(Arc::clone(&device))
+    {
+        (
+            output_queue,
+            Queue::get_capture_queue(Arc::clone(&device)).expect("Failed to obtain capture queue"),
+            false,
+        )
+    } else if let Ok(output_queue) = Queue::get_output_mplane_queue(Arc::clone(&device)) {
+        (
+            output_queue,
+            Queue::get_capture_mplane_queue(Arc::clone(&device))
+                .expect("Failed to obtain capture queue"),
+            true,
+        )
+    } else {
+        panic!("Both single-planar and multi-planar queues are unusable.");
     };
 
-    let mut decoder = Decoder::open(&Path::new(&DECODE_DEVICE_PATH))
-        .expect("Failed to open device")
-        .set_output_format(|f| {
-            let format: Format = f.set_pixelformat(b"H264").set_size(1920, 1080).apply()?;
+    println!(
+        "Multi-planar: {}",
+        if use_multi_planar { "yes" } else { "no" }
+    );
 
-            ensure!(
-                format.pixelformat == b"H264".into(),
-                "H264 format not supported"
-            );
+    println!("Output capabilities: {:?}", output_queue.get_capabilities());
+    println!(
+        "Capture capabilities: {:?}",
+        capture_queue.get_capabilities()
+    );
 
-            println!("Temporary output format: {:?}", format);
-
-            Ok(())
-        })
-        .expect("Failed to set output format")
-        .allocate_output_buffers::<Vec<MmapHandle>>(NUM_OUTPUT_BUFFERS)
-        .expect("Failed to allocate output buffers")
-        .set_poll_counter(poll_count_writer)
-        .start(input_done_cb, decoder_event_cb, set_capture_format_cb)
-        .expect("Failed to start decoder");
-
-    println!("Allocated {} buffers", decoder.num_output_buffers());
-
-    let mut total_read: usize = 0;
-    let file_size = file.metadata()?.len();
-
-    loop {
-        // Ctrl-c ?
-        if lets_quit.load(Ordering::SeqCst) {
-            break;
-        }
-
-        let v4l2_buffer = match decoder.get_buffer() {
-            Ok(buffer) => buffer,
-            // If we got interrupted while waiting for a buffer, just exit normally.
-            Err(GetBufferError::PollError(PollError::EPollWait(e)))
-                if e.kind() == std::io::ErrorKind::Interrupted =>
-            {
-                break;
-            }
-            Err(e) => panic!("{}", e),
-        };
-
-        let mut mapping = v4l2_buffer
-            .get_plane_mapping(0)
-            .expect("Failed to get Mmap mapping");
-
-        let bytes_read = file.read(&mut mapping.data)?;
-        let mat = h264_aud_pattern
-            .find(&mapping.data[1..])
-            .expect("Failed to find AUD in file");
-        let bytes_used = mat.start() + 1;
-        total_read += bytes_used;
-        // mapping.data[bytes_used..].fill(0);
-
-        let offset = bytes_read as i64 - bytes_used as i64;
-        let new_position = file.seek(SeekFrom::Current(-offset))?;
-        debug_assert_eq!(total_read, new_position as usize);
-
-        println!(
-            "Filled buffer with {} bytes, new_position: {}, len: {}, read: {}",
-            bytes_used, new_position, file_size, total_read
-        );
-        v4l2_buffer
-            .queue(&[bytes_used])
-            .expect("Failed to queue input frame");
+    println!("Output formats:");
+    for fmtdesc in output_queue.format_iter() {
+        println!("\t{}", fmtdesc);
     }
 
-    decoder.drain(true).unwrap();
-    decoder.stop().unwrap();
-    println!();
+    println!("Capture formats:");
+    for fmtdesc in capture_queue.format_iter() {
+        println!("\t{}", fmtdesc);
+    }
+
+    // Make sure the CAPTURE queue will produce FWHT.
+    let capture_format: Format = capture_queue
+        .change_format()
+        .expect("Failed to get capture format")
+        .set_size(1920, 1080)
+        .set_pixelformat(b"RGBP")
+        .apply()
+        .expect("Failed to set capture format");
+
+    if capture_format.pixelformat != b"RGBP".into() {
+        panic!("RGBP format not supported on CAPTURE queue.");
+    }
+
+    capture_queue.set_format(capture_format.clone())?;
+
+    // Set 640x480 RGB3 format on the OUTPUT queue.
+    let output_format: Format = output_queue
+        .change_format()
+        .expect("Failed to get output format")
+        .set_size(1920, 1080)
+        .set_pixelformat(b"H264")
+        .apply()
+        .expect("Failed to set output format");
+
+    if output_format.pixelformat != b"H264".into() {
+        panic!("H264 format not supported on OUTPUT queue.");
+    }
+    output_queue.set_format(output_format.clone())?;
+
+    println!("Adjusted output format: {:?}", output_format);
+    println!("Adjusted capture format: {:?}", capture_format);
+
+    let output_image_size = output_format.plane_fmt[0].sizeimage as usize;
+
+    match CAPTURE_MEM {
+        // MemoryType::Mmap => (),
+        MemoryType::DmaBuf => (),
+        m => panic!("Unsupported capture memory type {:?}", m),
+    }
+
+    // Move the queues into their "allocated" state.
+
+    let output_mem = match OUTPUT_MEM {
+        MemoryType::Mmap => GenericSupportedMemoryType::Mmap,
+        MemoryType::UserPtr => GenericSupportedMemoryType::UserPtr,
+        MemoryType::DmaBuf => panic!("DmaBuf is not supported yet!"),
+    };
+
+    let output_queue = output_queue
+        .request_buffers_generic::<GenericBufferHandles>(output_mem, NUM_OUTPUT_BUFFERS)
+        .expect("Failed to allocate output buffers");
+
+    let capture_queue = capture_queue
+        .request_buffers::<Vec<DmaBufHandle<File>>>(NUM_CAPTURE_BUFFERS)
+        .expect("Failed to allocate output buffers");
+    println!(
+        "Using {} output and {} capture buffers.",
+        output_queue.num_buffers(),
+        capture_queue.num_buffers()
+    );
+
+    // If we use UserPtr OUTPUT buffers, create backing memory.
+    let mut output_frame = match output_mem {
+        GenericSupportedMemoryType::Mmap => None,
+        GenericSupportedMemoryType::UserPtr => Some(vec![0u8; output_image_size]),
+        GenericSupportedMemoryType::DmaBuf => todo!(),
+    };
+
+    let render_device = modesetting::Card::open(RENDER_DEVICE_PATH)
+        .expect(&format!("Unable to open {}", RENDER_DEVICE_PATH));
+    let mode =
+        modesetting::get_mode(&render_device).expect("Failed to get prefered framebuffer mode");
+    // modesetting::set_crtc(&render_device, framebuffer, mode)?;
+    let fb_prime_fds: Vec<i32> = (0..NUM_CAPTURE_BUFFERS)
+        .into_iter()
+        .map(|i| {
+            let framebuffer = modesetting::get_framebuffer(&render_device, &mode, &capture_format)
+                .expect(&format!("Unable to allocate framebuffer {}", i));
+
+            framebuffer.prime
+        })
+        .collect();
+
+    let mut dmabuf_handles = dmabuf::register_dmabufs(
+        decode_path,
+        capture_queue.get_type(),
+        &capture_format,
+        &fb_prime_fds,
+    )
+    .expect("Could not register a DMABuf");
+    // let pooled_dma_buffers = PooledDMABufHandlesProvider::new(dmabuf_handles);
+
+    output_queue
+        .stream_on()
+        .expect("Failed to start output_queue");
+    capture_queue
+        .stream_on()
+        .expect("Failed to start capture_queue");
+
+    let mut cpt = 0usize;
+    let mut total_size = 0usize;
+    let start_time = Instant::now();
+    // Encode generated frames until Ctrl+c is pressed.
+    while !lets_quit.load(Ordering::SeqCst) {
+        match capture_queue.try_get_free_buffer() {
+            Ok(capture_buffer) => {
+                // There is no information to set on Mmap capture buffers: just queue
+                // them as soon as we get them.
+                let dmabufs = dmabuf_handles
+                    .pop_front()
+                    .expect("Unable to get an available dmabuf");
+                dbg!(&dmabufs);
+                capture_buffer
+                    .queue_with_handles(dmabufs)
+                    .expect("Failed to queue capture buffer");
+            }
+            Err(error) => {
+                eprintln!("Failed to obtain capture buffer: {:?}", error);
+            }
+        }
+
+        // USERPTR output buffers, on the other hand, must be set up with
+        // a user buffer and bytes_used.
+        // The queue takes ownership of the buffer until the driver is done
+        // with it.
+        match output_queue.try_get_free_buffer() {
+            Ok(output_buffer) => {
+                match output_buffer {
+                    GenericQBuffer::Mmap(buf) => {
+                        let mut mapping = buf
+                            .get_plane_mapping(0)
+                            .expect("Failed to get Mmap mapping");
+
+                        let bytes_read = file.read(&mut mapping.data)?;
+
+                        let mat = h264_aud_pattern
+                            .find(&mapping.data[1..])
+                            .expect("Failed to find AUD in file");
+                        let bytes_used = mat.start();
+                        // dbg!(&mapping.data[..6]);
+                        mapping.data[bytes_used..].fill(0);
+
+                        let offset = bytes_read as i64 - bytes_used as i64 - 1;
+                        dbg!(
+                            bytes_read,
+                            bytes_used,
+                            file.seek(SeekFrom::Current(0))?,
+                            offset
+                        );
+                        let new_position = file.seek(SeekFrom::Current(-offset))?;
+                        dbg!(new_position);
+
+                        buf.queue(&[bytes_used])
+                            .expect("Failed to queue output buffer");
+
+                        println!("Read {} bytes into buffer!", bytes_used);
+                    }
+                    GenericQBuffer::User(buf) => {
+                        let mut output_buffer_data = output_frame
+                            .take()
+                            .expect("Output buffer not available. This is a bug.");
+
+                        let bytes_used = file.read(&mut output_buffer_data)?;
+
+                        buf.queue_with_handles(
+                            GenericBufferHandles::from(vec![UserPtrHandle::from(
+                                output_buffer_data,
+                            )]),
+                            &[bytes_used],
+                        )
+                        .expect("Failed to queue output buffer");
+                    }
+                    GenericQBuffer::DmaBuf(_) => todo!(),
+                }
+            }
+            Err(error) => {
+                eprintln!("Failed to obtain output buffer: {:?}", error);
+            }
+        }
+
+        // Now dequeue the work that we just scheduled.
+        match output_queue.try_dequeue() {
+            Ok(mut out_dqbuf) => {
+                // unwrap() is safe here as we just dequeued the buffer.
+                match &mut out_dqbuf.take_handles().unwrap() {
+                    // For Mmap buffers we can just drop the reference.
+                    GenericBufferHandles::Mmap(_) => (),
+                    // For UserPtr buffers, make the buffer data available again. It
+                    // should have been empty since the buffer was owned by the queue.
+                    GenericBufferHandles::User(u) => {
+                        assert_eq!(output_frame.replace(u.remove(0).0), None);
+                    }
+                    GenericBufferHandles::DmaBuf(_) => todo!(),
+                }
+            }
+            Err(error) => {
+                eprintln!("Failed to dequeue output buffer: {:?}", error);
+            }
+        }
+
+        let cap_dqbuf = capture_queue.try_dequeue();
+
+        // If cap_dqbuf is error then it's not ready
+        if cap_dqbuf.is_err() {
+            eprintln!(
+                "Failed to dequeue capture buffer: {:?}",
+                cap_dqbuf.unwrap_err()
+            );
+            continue;
+        }
+
+        let cap_dqbuf = cap_dqbuf.expect("Failed to dequeue capture buffer");
+        let cap_index = cap_dqbuf.data.index() as usize;
+        let bytes_used = cap_dqbuf.data.get_first_plane().bytesused() as usize;
+
+        total_size = total_size.wrapping_add(bytes_used);
+        let elapsed = start_time.elapsed();
+        let fps = cpt as f64 / elapsed.as_millis() as f64 * 1000.0;
+        print!(
+            "\rDecoded buffer {:#5}, -> {:#2}), bytes used:{:#6} total encoded size:{:#8} fps: {:#5.2}\n",
+            cap_dqbuf.data.sequence(),
+            cap_index,
+            bytes_used,
+            total_size,
+            fps
+        );
+        io::stdout().flush().unwrap();
+
+        // let cap_handles = cap_dqbuf.take_handles().unwrap();
+        // modesetting::set_crtc(&render_device, Some(cap_handles[0]), Some(mode))
+        // .expect("Unable to set first framebuffer as current crtc");
+        // render_device.
+
+        cpt = cpt.wrapping_add(1);
+    }
+
+    capture_queue
+        .stream_off()
+        .expect("Failed to stop output_queue");
+    output_queue
+        .stream_off()
+        .expect("Failed to stop output_queue");
 
     Ok(())
 }

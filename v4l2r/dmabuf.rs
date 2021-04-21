@@ -15,7 +15,7 @@ pub fn register_dmabufs(
     queue: QueueType,
     format: &Format,
     file_descriptors: &[RawFd],
-) -> Result<VecDeque<Vec<DmaBufHandle<File>>>> {
+) -> Result<Vec<Vec<DmaBufHandle<File>>>> {
     let mut device = Device::open(device_path, Default::default())?;
 
     let set_format: Format = ioctl::s_fmt(&mut device, queue, format.clone()).unwrap();
@@ -36,7 +36,7 @@ pub fn register_dmabufs(
     .unwrap();
     assert_eq!(file_descriptors.len(), nb_buffers);
 
-    let fds: VecDeque<Vec<DmaBufHandle<File>>> = (0..nb_buffers)
+    let fds: Vec<Vec<DmaBufHandle<File>>> = (0..nb_buffers)
         .into_iter()
         .map(|buffer| {
             // let plane_buffers = [file_descriptors[buffer]];
