@@ -15,7 +15,7 @@ There are 3 folders.
 ##### src
 Uses low level functions of the v4l2r library
 
-##### v4l2r
+##### stateful
 Uses the stateful decoder portion of the v4l2r library
 
 ##### manual
