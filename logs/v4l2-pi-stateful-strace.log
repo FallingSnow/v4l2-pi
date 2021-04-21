@@ -1,0 +1,934 @@
+execve("./target/debug/v4l2-pi-udp", ["./target/debug/v4l2-pi-udp"], 0x7fcc3de908 /* 29 vars */) = 0
+brk(NULL)                               = 0x557e439000
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=78931, ...}) = 0
+mmap(NULL, 78931, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f816a4000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\320&\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=627144, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f816e5000
+mmap(NULL, 148176, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8167f000
+mprotect(0x7f81693000, 61440, PROT_NONE) = 0
+mmap(0x7f816a2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f816a2000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\200#\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=31024, ...}) = 0
+mmap(NULL, 94568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f81667000
+mprotect(0x7f8166e000, 61440, PROT_NONE) = 0
+mmap(0x7f8167d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f8167d000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\260j\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=166232, ...}) = 0
+mmap(NULL, 192872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f81637000
+mprotect(0x7f81652000, 61440, PROT_NONE) = 0
+mmap(0x7f81661000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f81661000
+mmap(0x7f81663000, 12648, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f81663000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\340\20\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14288, ...}) = 0
+mmap(NULL, 77920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f81623000
+mprotect(0x7f81626000, 61440, PROT_NONE) = 0
+mmap(0x7f81635000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f81635000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\200F\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1827624, ...}) = 0
+mmap(NULL, 1522096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f814af000
+mprotect(0x7f8160a000, 65536, PROT_NONE) = 0
+mmap(0x7f8161a000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15b000) = 0x7f8161a000
+mmap(0x7f81620000, 10672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f81620000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f816e3000
+mprotect(0x7f8161a000, 12288, PROT_READ) = 0
+mprotect(0x7f81635000, 4096, PROT_READ) = 0
+mprotect(0x7f81661000, 4096, PROT_READ) = 0
+mprotect(0x7f8167d000, 4096, PROT_READ) = 0
+mprotect(0x7f816a2000, 4096, PROT_READ) = 0
+mprotect(0x556859d000, 40960, PROT_READ) = 0
+mprotect(0x7f816ea000, 4096, PROT_READ) = 0
+munmap(0x7f816a4000, 78931)             = 0
+set_tid_address(0x7f816e3900)           = 13381
+set_robust_list(0x7f816e3910, 24)       = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f8163d544, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f8163d600, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+ppoll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+brk(NULL)                               = 0x557e439000
+brk(0x557e45a000)                       = 0x557e45a000
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "5568400000-556858e000 r-xp 00000"..., 1024) = 1024
+read(3, "                /usr/lib/libdl-2"..., 1024) = 1024
+read(3, "                 /usr/lib/librt-"..., 1024) = 989
+close(3)                                = 0
+sched_getaffinity(13381, 32, [0, 1, 2, 3]) = 8
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x556851a604, sa_mask=[], sa_flags=SA_ONSTACK|SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x556851a604, sa_mask=[], sa_flags=SA_ONSTACK|SA_SIGINFO}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f816de000
+mprotect(0x7f816de000, 4096, PROT_NONE) = 0
+sigaltstack({ss_sp=0x7f816df000, ss_flags=0, ss_size=16384}, NULL) = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+fcntl(4, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+rt_sigaction(SIGINT, {sa_handler=0x5568490ca4, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+futex(0x7f81636048, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f812ae000
+mprotect(0x7f812af000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7f814ad940, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTIDstrace: Process 13382 attached
+, parent_tid=[13382], tls=0x7f814ae860, child_tidptr=0x7f814ae1a0) = 13382
+[pid 13382] set_robust_list(0x7f814ae1b0, 24 <unfinished ...>
+[pid 13381] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 13382] <... set_robust_list resumed>) = 0
+[pid 13381] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 13382] rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+[pid 13382] sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 13382] mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f816b3000
+[pid 13382] mprotect(0x7f816b3000, 4096, PROT_NONE) = 0
+[pid 13382] sigaltstack({ss_sp=0x7f816b4000, ss_flags=0, ss_size=16384}, NULL) = 0
+[pid 13382] prctl(PR_SET_NAME, "ctrl-c") = 0
+[pid 13382] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7f792ae000
+[pid 13382] munmap(0x7f792ae000, 47521792) = 0
+[pid 13382] munmap(0x7f80000000, 19587072) = 0
+[pid 13382] mprotect(0x7f7c000000, 135168, PROT_READ|PROT_WRITE) = 0
+[pid 13382] sched_getaffinity(13382, 32, [0, 1, 2, 3]) = 8
+[pid 13382] read(3,  <unfinished ...>
+[pid 13381] openat(AT_FDCWD, "/home/alarm/FPS_test_1080p60_L4.2.h264", O_RDONLY|O_CLOEXEC) = 5
+[pid 13381] openat(AT_FDCWD, "/dev/dri/card0", O_RDWR|O_CLOEXEC) = 6
+[pid 13381] ioctl(6, DRM_IOCTL_MODE_GETRESOURCES, 0x7ff3c78c08) = 0
+[pid 13381] ioctl(6, DRM_IOCTL_MODE_GETCONNECTOR, 0x7ff3c79528) = 0
+[pid 13381] ioctl(6, DRM_IOCTL_MODE_GETCONNECTOR, 0x7ff3c795d0) = 0
+[pid 13381] ioctl(6, DRM_IOCTL_MODE_GETCONNECTOR, 0x7ff3c79638) = 0
+[pid 13381] ioctl(6, DRM_IOCTL_MODE_GETCONNECTOR, 0x7ff3c796e0) = 0
+[pid 13381] write(1, "Handles:\n", 9)   = 9
+[pid 13381] write(1, "\tconnector::Handle(89)\n", 23) = 23
+[pid 13381] write(1, "- Connector: connector::Handle(8"..., 70) = 70
+[pid 13381] write(1, "\t\"1920x1080\"\n", 13) = 13
+[pid 13381] write(1, "\t\"1920x1080\"\n", 13) = 13
+[pid 13381] write(1, "\t\"1680x1050\"\n", 13) = 13
+[pid 13381] write(1, "\t\"1600x900\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1280x1024\"\n", 13) = 13
+[pid 13381] write(1, "\t\"1280x1024\"\n", 13) = 13
+[pid 13381] write(1, "\t\"1280x800\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1152x864\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1280x720\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1280x720\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1024x768\"\n", 12) = 12
+[pid 13381] write(1, "\t\"1024x768\"\n", 12) = 12
+[pid 13381] write(1, "\t\"832x624\"\n", 11) = 11
+[pid 13381] write(1, "\t\"800x600\"\n", 11) = 11
+[pid 13381] write(1, "\t\"800x600\"\n", 11) = 11
+[pid 13381] write(1, "\t\"720x480\"\n", 11) = 11
+[pid 13381] write(1, "\t\"720x480\"\n", 11) = 11
+[pid 13381] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13381] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13381] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13381] write(1, "\t\"720x400\"\n", 11) = 11
+[pid 13381] openat(AT_FDCWD, "/dev/video10", O_RDWR|O_NONBLOCK|O_CLOEXEC) = 7
+[pid 13381] ioctl(7, VIDIOC_QUERYCAP, {driver="bcm2835-codec", card="bcm2835-codec-decode", bus_info="platform:bcm2835-codec", version=KERNEL_VERSION(5, 10, 31), capabilities=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING|V4L2_CAP_DEVICE_CAPS, device_caps=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING}) = 0
+[pid 13381] ioctl(7, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, memory=V4L2_MEMORY_MMAP, count=0 => 0}) = 0
+[pid 13381] ioctl(7, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, memory=V4L2_MEMORY_MMAP, count=0 => 0}) = 0
+[pid 13381] ioctl(7, VIDIOC_ENUM_FMT, {index=0, type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, flags=V4L2_FMT_FLAG_COMPRESSED, description="H.264", pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */}) = 0
+[pid 13381] ioctl(7, VIDIOC_ENUM_FMT, {index=0, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="Planar YUV 4:2:0", pixelformat=v4l2_fourcc('Y', 'U', '1', '2') /* V4L2_PIX_FMT_YUV420 */}) = 0
+[pid 13381] ioctl(7, VIDIOC_G_FMT, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, fmt.pix_mp={width=640, height=480, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_REC709, plane_fmt=[{sizeimage=524288, bytesperline=0}], num_planes=1}}) = 0
+[pid 13381] ioctl(7, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=524288, bytesperline=0}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_REC709, plane_fmt=[{sizeimage=786432, bytesperline=0}], num_planes=1}}) = 0
+[pid 13381] write(1, "Temporary output format: Format "..., 159) = 159
+[pid 13381] ioctl(7, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, memory=V4L2_MEMORY_MMAP, count=2 => 2}) = 0
+[pid 13381] ioctl(7, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79d88, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79d88, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_SUBSCRIBE_EVENT, 0x7ff3c79aa8) = 0
+[pid 13381] epoll_create1(EPOLL_CLOEXEC) = 8
+[pid 13381] epoll_ctl(8, EPOLL_CTL_ADD, 7, {events=EPOLLIN, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLERR, data={u32=0, u64=4294967296}}], 1, 10, NULL, 8) = 1
+[pid 13381] epoll_ctl(8, EPOLL_CTL_MOD, 7, {events=0, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] epoll_ctl(8, EPOLL_CTL_MOD, 7, {events=EPOLLOUT, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] epoll_create1(EPOLL_CLOEXEC) = 9
+[pid 13381] epoll_ctl(9, EPOLL_CTL_ADD, 7, {events=EPOLLIN, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] epoll_pwait(9, [{events=EPOLLERR, data={u32=0, u64=4294967296}}], 1, 10, NULL, 8) = 1
+[pid 13381] epoll_ctl(9, EPOLL_CTL_MOD, 7, {events=0, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] epoll_ctl(9, EPOLL_CTL_MOD, 7, {events=EPOLLPRI, data={u32=0, u64=4294967296}}) = 0
+[pid 13381] eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK) = 10
+[pid 13381] epoll_ctl(9, EPOLL_CTL_ADD, 10, {events=EPOLLIN, data={u32=2, u64=2}}) = 0
+[pid 13381] mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f810ad000
+[pid 13381] mprotect(0x7f810ae000, 2097152, PROT_READ|PROT_WRITE) = 0
+[pid 13381] rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+[pid 13381] clone(child_stack=0x7f812ac940, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTIDstrace: Process 13383 attached
+, parent_tid=[13383], tls=0x7f812ad860, child_tidptr=0x7f812ad1a0) = 13383
+[pid 13383] set_robust_list(0x7f812ad1b0, 24 <unfinished ...>
+[pid 13381] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 13383] <... set_robust_list resumed>) = 0
+[pid 13381] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 13383] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 13381] ioctl(7, VIDIOC_STREAMON, [V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE] <unfinished ...>
+[pid 13383] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 13383] sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 13383] mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f816ae000
+[pid 13383] mprotect(0x7f816ae000, 4096, PROT_NONE) = 0
+[pid 13383] sigaltstack({ss_sp=0x7f816af000, ss_flags=0, ss_size=16384}, NULL) = 0
+[pid 13383] prctl(PR_SET_NAME, "V4L2 Decoder") = 0
+[pid 13383] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7f74000000
+[pid 13383] munmap(0x7f78000000, 67108864) = 0
+[pid 13383] mprotect(0x7f74000000, 135168, PROT_READ|PROT_WRITE) = 0
+[pid 13383] sched_getaffinity(13383, 32, [0, 1, 2, 3]) = 8
+[pid 13383] epoll_pwait(9,  <unfinished ...>
+[pid 13381] <... ioctl resumed>)        = 0
+[pid 13381] write(1, "Allocated 2 buffers\n", 20) = 20
+[pid 13381] statx(0, NULL, AT_STATX_SYNC_AS_STAT, STATX_ALL, NULL) = -1 EFAULT (Bad address)
+[pid 13381] statx(5, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0777, stx_size=26840934, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786397, SEEK_CUR) = 35
+[pid 13381] write(1, "Filled buffer with 35 bytes, new"..., 71) = 71
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -779035, SEEK_CUR) = 7432
+[pid 13381] write(1, "Filled buffer with 7397 bytes, n"..., 77) = 77
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -782485, SEEK_CUR) = 11379
+[pid 13381] write(1, "Filled buffer with 3947 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785636, SEEK_CUR) = 12175
+[pid 13381] write(1, "Filled buffer with 796 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786247, SEEK_CUR) = 12360
+[pid 13381] write(1, "Filled buffer with 185 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785360, SEEK_CUR) = 13432
+[pid 13381] write(1, "Filled buffer with 1072 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785999, SEEK_CUR) = 13865
+[pid 13381] write(1, "Filled buffer with 433 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785419, SEEK_CUR) = 14878
+[pid 13381] write(1, "Filled buffer with 1013 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786236, SEEK_CUR) = 15074
+[pid 13381] write(1, "Filled buffer with 196 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785885, SEEK_CUR) = 15621
+[pid 13381] write(1, "Filled buffer with 547 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786083, SEEK_CUR) = 15970
+[pid 13381] write(1, "Filled buffer with 349 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785388, SEEK_CUR) = 17014
+[pid 13381] write(1, "Filled buffer with 1044 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786025, SEEK_CUR) = 17421
+[pid 13381] write(1, "Filled buffer with 407 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786257, SEEK_CUR) = 17596
+[pid 13381] write(1, "Filled buffer with 175 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785466, SEEK_CUR) = 18562
+[pid 13381] write(1, "Filled buffer with 966 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786253, SEEK_CUR) = 18741
+[pid 13381] write(1, "Filled buffer with 179 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785383, SEEK_CUR) = 19790
+[pid 13381] write(1, "Filled buffer with 1049 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786025, SEEK_CUR) = 20197
+[pid 13381] write(1, "Filled buffer with 407 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785824, SEEK_CUR) = 20805
+[pid 13381] write(1, "Filled buffer with 608 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785486, SEEK_CUR) = 21751
+[pid 13381] write(1, "Filled buffer with 946 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785458, SEEK_CUR) = 22725
+[pid 13381] write(1, "Filled buffer with 974 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786108, SEEK_CUR) = 23049
+[pid 13381] write(1, "Filled buffer with 324 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786276, SEEK_CUR) = 23205
+[pid 13381] write(1, "Filled buffer with 156 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785386, SEEK_CUR) = 24251
+[pid 13381] write(1, "Filled buffer with 1046 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786275, SEEK_CUR) = 24408
+[pid 13381] write(1, "Filled buffer with 157 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785457, SEEK_CUR) = 25383
+[pid 13381] write(1, "Filled buffer with 975 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786120, SEEK_CUR) = 25695
+[pid 13381] write(1, "Filled buffer with 312 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785884, SEEK_CUR) = 26243
+[pid 13381] write(1, "Filled buffer with 548 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785934, SEEK_CUR) = 26741
+[pid 13381] write(1, "Filled buffer with 498 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785427, SEEK_CUR) = 27746
+[pid 13381] write(1, "Filled buffer with 1005 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786036, SEEK_CUR) = 28142
+[pid 13381] write(1, "Filled buffer with 396 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786253, SEEK_CUR) = 28321
+[pid 13381] write(1, "Filled buffer with 179 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785461, SEEK_CUR) = 29292
+[pid 13381] write(1, "Filled buffer with 971 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785965, SEEK_CUR) = 29759
+[pid 13381] write(1, "Filled buffer with 467 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785392, SEEK_CUR) = 30799
+[pid 13381] write(1, "Filled buffer with 1040 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786018, SEEK_CUR) = 31213
+[pid 13381] write(1, "Filled buffer with 414 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785689, SEEK_CUR) = 31956
+[pid 13381] write(1, "Filled buffer with 743 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785599, SEEK_CUR) = 32789
+[pid 13381] write(1, "Filled buffer with 833 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785449, SEEK_CUR) = 33772
+[pid 13381] write(1, "Filled buffer with 983 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786076, SEEK_CUR) = 34128
+[pid 13381] write(1, "Filled buffer with 356 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786276, SEEK_CUR) = 34284
+[pid 13381] write(1, "Filled buffer with 156 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785359, SEEK_CUR) = 35357
+[pid 13381] write(1, "Filled buffer with 1073 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786266, SEEK_CUR) = 35523
+[pid 13381] write(1, "Filled buffer with 166 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785464, SEEK_CUR) = 36491
+[pid 13381] write(1, "Filled buffer with 968 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786114, SEEK_CUR) = 36809
+[pid 13381] write(1, "Filled buffer with 318 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786097, SEEK_CUR) = 37144
+[pid 13381] write(1, "Filled buffer with 335 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785193, SEEK_CUR) = 38383
+[pid 13381] write(1, "Filled buffer with 1239 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785955, SEEK_CUR) = 38860
+[pid 13381] write(1, "Filled buffer with 477 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786283, SEEK_CUR) = 39009
+[pid 13381] write(1, "Filled buffer with 149 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785846, SEEK_CUR) = 39595
+[pid 13381] write(1, "Filled buffer with 586 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786151, SEEK_CUR) = 39876
+[pid 13381] write(1, "Filled buffer with 281 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786268, SEEK_CUR) = 40040
+[pid 13381] write(1, "Filled buffer with 164 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786086, SEEK_CUR) = 40386
+[pid 13381] write(1, "Filled buffer with 346 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786397, SEEK_CUR) = 40421
+[pid 13381] write(1, "Filled buffer with 35 bytes, new"..., 77) = 77
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -779666, SEEK_CUR) = 47187
+[pid 13381] write(1, "Filled buffer with 6766 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786054, SEEK_CUR) = 47565
+[pid 13381] write(1, "Filled buffer with 378 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785307, SEEK_CUR) = 48690
+[pid 13381] write(1, "Filled buffer with 1125 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786157, SEEK_CUR) = 48965
+[pid 13381] write(1, "Filled buffer with 275 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786231, SEEK_CUR) = 49166
+[pid 13381] write(1, "Filled buffer with 201 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785261, SEEK_CUR) = 50337
+[pid 13381] write(1, "Filled buffer with 1171 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786270, SEEK_CUR) = 50499
+[pid 13381] write(1, "Filled buffer with 162 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785317, SEEK_CUR) = 51614
+[pid 13381] write(1, "Filled buffer with 1115 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786011, SEEK_CUR) = 52035
+[pid 13381] write(1, "Filled buffer with 421 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -782057, SEEK_CUR) = 56410
+[pid 13381] write(1, "Filled buffer with 4375 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785663, SEEK_CUR) = 57179
+[pid 13381] write(1, "Filled buffer with 769 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786234, SEEK_CUR) = 57377
+[pid 13381] write(1, "Filled buffer with 198 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785324, SEEK_CUR) = 58485
+[pid 13381] write(1, "Filled buffer with 1108 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785998, SEEK_CUR) = 58919
+[pid 13381] write(1, "Filled buffer with 434 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785425, SEEK_CUR) = 59926
+[pid 13381] write(1, "Filled buffer with 1007 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786234, SEEK_CUR) = 60124
+[pid 13381] write(1, "Filled buffer with 198 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785458, SEEK_CUR) = 61098
+[pid 13381] write(1, "Filled buffer with 974 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785152, SEEK_CUR) = 62378
+[pid 13381] write(1, "Filled buffer with 1280 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786070, SEEK_CUR) = 62740
+[pid 13381] write(1, "Filled buffer with 362 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786261, SEEK_CUR) = 62911
+[pid 13381] write(1, "Filled buffer with 171 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786072, SEEK_CUR) = 63271
+[pid 13381] write(1, "Filled buffer with 360 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786075, SEEK_CUR) = 63628
+[pid 13381] write(1, "Filled buffer with 357 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786255, SEEK_CUR) = 63805
+[pid 13381] write(1, "Filled buffer with 177 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786077, SEEK_CUR) = 64160
+[pid 13381] write(1, "Filled buffer with 355 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785640, SEEK_CUR) = 64952
+[pid 13381] write(1, "Filled buffer with 792 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785988, SEEK_CUR) = 65396
+[pid 13381] write(1, "Filled buffer with 444 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785350, SEEK_CUR) = 66478
+[pid 13381] write(1, "Filled buffer with 1082 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786153, SEEK_CUR) = 66757
+[pid 13381] write(1, "Filled buffer with 279 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786261, SEEK_CUR) = 66928
+[pid 13381] write(1, "Filled buffer with 171 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785382, SEEK_CUR) = 67978
+[pid 13381] write(1, "Filled buffer with 1050 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786276, SEEK_CUR) = 68134
+[pid 13381] write(1, "Filled buffer with 156 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785349, SEEK_CUR) = 69217
+[pid 13381] write(1, "Filled buffer with 1083 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786169, SEEK_CUR) = 69480
+[pid 13381] write(1, "Filled buffer with 263 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785800, SEEK_CUR) = 70112
+[pid 13381] write(1, "Filled buffer with 632 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, [{events=EPOLLOUT, data={u32=0, u64=4294967296}}], 4, -1, NULL, 8) = 1
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c78430, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785848, SEEK_CUR) = 70696
+[pid 13381] write(1, "Filled buffer with 584 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785267, SEEK_CUR) = 71861
+[pid 13381] write(1, "Filled buffer with 1165 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786071, SEEK_CUR) = 72222
+[pid 13381] write(1, "Filled buffer with 361 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786252, SEEK_CUR) = 72402
+[pid 13381] write(1, "Filled buffer with 180 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785299, SEEK_CUR) = 73535
+[pid 13381] write(1, "Filled buffer with 1133 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786270, SEEK_CUR) = 73697
+[pid 13381] write(1, "Filled buffer with 162 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785285, SEEK_CUR) = 74844
+[pid 13381] write(1, "Filled buffer with 1147 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786057, SEEK_CUR) = 75219
+[pid 13381] write(1, "Filled buffer with 375 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785882, SEEK_CUR) = 75769
+[pid 13381] write(1, "Filled buffer with 550 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785869, SEEK_CUR) = 76332
+[pid 13381] write(1, "Filled buffer with 563 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785415, SEEK_CUR) = 77349
+[pid 13381] write(1, "Filled buffer with 1017 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786149, SEEK_CUR) = 77632
+[pid 13381] write(1, "Filled buffer with 283 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786230, SEEK_CUR) = 77834
+[pid 13381] write(1, "Filled buffer with 202 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c785e0, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -785353, SEEK_CUR) = 78913
+[pid 13381] write(1, "Filled buffer with 1079 bytes, n"..., 79) = 79
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] ioctl(7, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13381] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0xc0000) = 0x7f80fed000
+[pid 13381] read(5, 0x7f80fed000, 786432) = 786432
+[pid 13381] lseek(5, -786258, SEEK_CUR) = 79087
+[pid 13381] write(1, "Filled buffer with 174 bytes, ne"..., 78) = 78
+[pid 13381] ioctl(7, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xf3c79ff8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13381] munmap(0x7f80fed000, 786432) = 0
+[pid 13381] epoll_pwait(8, strace: Process 13381 detached
+ <detached ...>
+strace: Process 13382 detached
+strace: Process 13383 detached

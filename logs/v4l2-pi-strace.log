@@ -1,0 +1,1723 @@
+execve("./target/debug/v4l2-pi-udp", ["./target/debug/v4l2-pi-udp"], 0x7fed506ea8 /* 29 vars */) = 0
+brk(NULL)                               = 0x5572da0000
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=78931, ...}) = 0
+mmap(NULL, 78931, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f9db50000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\320&\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=627144, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9db91000
+mmap(NULL, 148176, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f9db2b000
+mprotect(0x7f9db3f000, 61440, PROT_NONE) = 0
+mmap(0x7f9db4e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f9db4e000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\200#\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=31024, ...}) = 0
+mmap(NULL, 94568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f9db13000
+mprotect(0x7f9db1a000, 61440, PROT_NONE) = 0
+mmap(0x7f9db29000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f9db29000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\260j\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=166232, ...}) = 0
+mmap(NULL, 192872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f9dae3000
+mprotect(0x7f9dafe000, 61440, PROT_NONE) = 0
+mmap(0x7f9db0d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f9db0d000
+mmap(0x7f9db0f000, 12648, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f9db0f000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\340\20\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14288, ...}) = 0
+mmap(NULL, 77920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f9dacf000
+mprotect(0x7f9dad2000, 61440, PROT_NONE) = 0
+mmap(0x7f9dae1000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f9dae1000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\200F\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1827624, ...}) = 0
+mmap(NULL, 1522096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f9d95b000
+mprotect(0x7f9dab6000, 65536, PROT_NONE) = 0
+mmap(0x7f9dac6000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15b000) = 0x7f9dac6000
+mmap(0x7f9dacc000, 10672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f9dacc000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9db8f000
+mprotect(0x7f9dac6000, 12288, PROT_READ) = 0
+mprotect(0x7f9dae1000, 4096, PROT_READ) = 0
+mprotect(0x7f9db0d000, 4096, PROT_READ) = 0
+mprotect(0x7f9db29000, 4096, PROT_READ) = 0
+mprotect(0x7f9db4e000, 4096, PROT_READ) = 0
+mprotect(0x555d211000, 32768, PROT_READ) = 0
+mprotect(0x7f9db96000, 4096, PROT_READ) = 0
+munmap(0x7f9db50000, 78931)             = 0
+set_tid_address(0x7f9db8f900)           = 13102
+set_robust_list(0x7f9db8f910, 24)       = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f9dae9544, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f9dae9600, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+ppoll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+brk(NULL)                               = 0x5572da0000
+brk(0x5572dc1000)                       = 0x5572dc1000
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "555d0c0000-555d201000 r-xp 00000"..., 1024) = 1024
+read(3, "                /usr/lib/libdl-2"..., 1024) = 1024
+read(3, "                 /usr/lib/librt-"..., 1024) = 989
+close(3)                                = 0
+sched_getaffinity(13102, 32, [0, 1, 2, 3]) = 8
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x555d19dcdc, sa_mask=[], sa_flags=SA_ONSTACK|SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x555d19dcdc, sa_mask=[], sa_flags=SA_ONSTACK|SA_SIGINFO}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9db8a000
+mprotect(0x7f9db8a000, 4096, PROT_NONE) = 0
+sigaltstack({ss_sp=0x7f9db8b000, ss_flags=0, ss_size=16384}, NULL) = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+fcntl(4, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+rt_sigaction(SIGINT, {sa_handler=0x555d120f74, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+futex(0x7f9dae2048, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f9d75a000
+mprotect(0x7f9d75b000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7f9d959940, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTIDstrace: Process 13103 attached
+, parent_tid=[13103], tls=0x7f9d95a860, child_tidptr=0x7f9d95a1a0) = 13103
+[pid 13103] set_robust_list(0x7f9d95a1b0, 24 <unfinished ...>
+[pid 13102] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 13103] <... set_robust_list resumed>) = 0
+[pid 13102] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 13103] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 13102] openat(AT_FDCWD, "/home/alarm/FPS_test_1080p60_L4.2.h264", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid 13103] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 13102] <... openat resumed>)       = 5
+[pid 13103] sigaltstack(NULL,  <unfinished ...>
+[pid 13102] openat(AT_FDCWD, "/dev/video10", O_RDWR|O_NONBLOCK|O_CLOEXEC <unfinished ...>
+[pid 13103] <... sigaltstack resumed>{ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+[pid 13103] mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 13102] <... openat resumed>)       = 6
+[pid 13103] <... mmap resumed>)         = 0x7f9db5f000
+[pid 13102] ioctl(6, VIDIOC_QUERYCAP <unfinished ...>
+[pid 13103] mprotect(0x7f9db5f000, 4096, PROT_NONE <unfinished ...>
+[pid 13102] <... ioctl resumed>, {driver="bcm2835-codec", card="bcm2835-codec-decode", bus_info="platform:bcm2835-codec", version=KERNEL_VERSION(5, 10, 31), capabilities=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING|V4L2_CAP_DEVICE_CAPS, device_caps=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING}) = 0
+[pid 13103] <... mprotect resumed>)     = 0
+[pid 13103] sigaltstack({ss_sp=0x7f9db60000, ss_flags=0, ss_size=16384},  <unfinished ...>
+[pid 13102] write(1, "Opened device: bcm2835-codec-dec"..., 36 <unfinished ...>
+[pid 13103] <... sigaltstack resumed>NULL) = 0
+[pid 13103] prctl(PR_SET_NAME, "ctrl-c" <unfinished ...>
+[pid 13102] <... write resumed>)        = 36
+[pid 13103] <... prctl resumed>)        = 0
+[pid 13102] write(1, "\tdriver: bcm2835-codec\n", 23 <unfinished ...>
+[pid 13103] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+[pid 13102] <... write resumed>)        = 23
+[pid 13103] <... mmap resumed>)         = 0x7f9575a000
+[pid 13102] write(1, "\tbus: platform:bcm2835-codec\n", 29 <unfinished ...>
+[pid 13103] munmap(0x7f9575a000, 42622976) = 0
+[pid 13102] <... write resumed>)        = 29
+[pid 13103] munmap(0x7f9c000000, 24485888 <unfinished ...>
+[pid 13102] write(1, "\tcapabilities: VIDEO_M2M_MPLANE "..., 75 <unfinished ...>
+[pid 13103] <... munmap resumed>)       = 0
+[pid 13103] mprotect(0x7f98000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+[pid 13102] <... write resumed>)        = 75
+[pid 13103] <... mprotect resumed>)     = 0
+[pid 13102] ioctl(6, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT, memory=V4L2_MEMORY_MMAP, count=0 <unfinished ...>
+[pid 13103] sched_getaffinity(13103, 32,  <unfinished ...>
+[pid 13102] <... ioctl resumed>})       = -1 EINVAL (Invalid argument)
+[pid 13103] <... sched_getaffinity resumed>[0, 1, 2, 3]) = 8
+[pid 13102] ioctl(6, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, memory=V4L2_MEMORY_MMAP, count=0 <unfinished ...>
+[pid 13103] read(3,  <unfinished ...>
+[pid 13102] <... ioctl resumed> => 0})  = 0
+[pid 13102] ioctl(6, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, memory=V4L2_MEMORY_MMAP, count=0 => 0}) = 0
+[pid 13102] write(1, "Multi-planar: yes\n", 18) = 18
+[pid 13102] write(1, "Output capabilities: SUPPORTS_MM"..., 78) = 78
+[pid 13102] write(1, "Capture capabilities: SUPPORTS_M"..., 79) = 79
+[pid 13102] write(1, "Output formats:\n", 16) = 16
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=0, type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, flags=V4L2_FMT_FLAG_COMPRESSED, description="H.264", pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */}) = 0
+[pid 13102] write(1, "\tH264: H.264 (COMPRESSED)\n", 26) = 26
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=1, type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, flags=V4L2_FMT_FLAG_COMPRESSED, description="Motion-JPEG", pixelformat=v4l2_fourcc('M', 'J', 'P', 'G') /* V4L2_PIX_FMT_MJPEG */}) = 0
+[pid 13102] write(1, "\tMJPG: Motion-JPEG (COMPRESSED)\n", 32) = 32
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=2, type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EINVAL (Invalid argument)
+[pid 13102] write(1, "Capture formats:\n", 17) = 17
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=0, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="Planar YUV 4:2:0", pixelformat=v4l2_fourcc('Y', 'U', '1', '2') /* V4L2_PIX_FMT_YUV420 */}) = 0
+[pid 13102] write(1, "\tYU12: Planar YUV 4:2:0 \n", 25) = 25
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=1, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="Planar YVU 4:2:0", pixelformat=v4l2_fourcc('Y', 'V', '1', '2') /* V4L2_PIX_FMT_YVU420 */}) = 0
+[pid 13102] write(1, "\tYV12: Planar YVU 4:2:0 \n", 25) = 25
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=2, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="Y/CbCr 4:2:0", pixelformat=v4l2_fourcc('N', 'V', '1', '2') /* V4L2_PIX_FMT_NV12 */}) = 0
+[pid 13102] write(1, "\tNV12: Y/CbCr 4:2:0 \n", 21) = 21
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=3, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="Y/CrCb 4:2:0", pixelformat=v4l2_fourcc('N', 'V', '2', '1') /* V4L2_PIX_FMT_NV21 */}) = 0
+[pid 13102] write(1, "\tNV21: Y/CrCb 4:2:0 \n", 21) = 21
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=4, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, flags=0, description="16-bit RGB 5-6-5", pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */}) = 0
+[pid 13102] write(1, "\tRGBP: 16-bit RGB 5-6-5 \n", 25) = 25
+[pid 13102] ioctl(6, VIDIOC_ENUM_FMT, {index=5, type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EINVAL (Invalid argument)
+[pid 13102] ioctl(6, VIDIOC_G_FMT, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, fmt.pix_mp={width=640, height=480, pixelformat=v4l2_fourcc('Y', 'U', '1', '2') /* V4L2_PIX_FMT_YUV420 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_REC709, plane_fmt=[{sizeimage=460800, bytesperline=640}], num_planes=1}}) = 0
+[pid 13102] ioctl(6, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=460800, bytesperline=640}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1088, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=4177920, bytesperline=3840}], num_planes=1}}) = 0
+[pid 13102] ioctl(6, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, fmt.pix_mp={width=1920, height=1088, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=4177920, bytesperline=3840}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1088, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=4177920, bytesperline=3840}], num_planes=1}}) = 0
+[pid 13102] ioctl(6, VIDIOC_G_FMT, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, fmt.pix_mp={width=640, height=480, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=524288, bytesperline=0}], num_planes=1}}) = 0
+[pid 13102] ioctl(6, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=524288, bytesperline=0}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=786432, bytesperline=0}], num_planes=1}}) = 0
+[pid 13102] ioctl(6, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=786432, bytesperline=0}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1080, pixelformat=v4l2_fourcc('H', '2', '6', '4') /* V4L2_PIX_FMT_H264 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=786432, bytesperline=0}], num_planes=1}}) = 0
+[pid 13102] write(1, "Adjusted output format: Format {"..., 158) = 158
+[pid 13102] write(1, "Adjusted capture format: Format "..., 163) = 163
+[pid 13102] ioctl(6, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, memory=V4L2_MEMORY_MMAP, count=2 => 2}) = 0
+[pid 13102] ioctl(6, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce943818, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce943818, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, memory=V4L2_MEMORY_DMABUF, count=2 => 2}) = 0
+[pid 13102] ioctl(6, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, index=0, memory=V4L2_MEMORY_DMABUF, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_QUERYBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, index=1, memory=V4L2_MEMORY_DMABUF, length=1, bytesused=0, flags=V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Using 2 output and 2 capture buf"..., 38) = 38
+[pid 13102] openat(AT_FDCWD, "/dev/dri/card0", O_RDWR|O_CLOEXEC) = 7
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_GETRESOURCES, 0x7fce9423b8) = 0
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_GETCONNECTOR, 0x7fce942cd8) = 0
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_GETCONNECTOR, 0x7fce942d80) = 0
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_GETCONNECTOR, 0x7fce942de8) = 0
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_GETCONNECTOR, 0x7fce942e90) = 0
+[pid 13102] write(1, "Handles:\n", 9)   = 9
+[pid 13102] write(1, "\tconnector::Handle(89)\n", 23) = 23
+[pid 13102] write(1, "- Connector: connector::Handle(8"..., 70) = 70
+[pid 13102] write(1, "\t\"1920x1080\"\n", 13) = 13
+[pid 13102] write(1, "\t\"1920x1080\"\n", 13) = 13
+[pid 13102] write(1, "\t\"1680x1050\"\n", 13) = 13
+[pid 13102] write(1, "\t\"1600x900\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1280x1024\"\n", 13) = 13
+[pid 13102] write(1, "\t\"1280x1024\"\n", 13) = 13
+[pid 13102] write(1, "\t\"1280x800\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1152x864\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1280x720\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1280x720\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1024x768\"\n", 12) = 12
+[pid 13102] write(1, "\t\"1024x768\"\n", 12) = 12
+[pid 13102] write(1, "\t\"832x624\"\n", 11) = 11
+[pid 13102] write(1, "\t\"800x600\"\n", 11) = 11
+[pid 13102] write(1, "\t\"800x600\"\n", 11) = 11
+[pid 13102] write(1, "\t\"720x480\"\n", 11) = 11
+[pid 13102] write(1, "\t\"720x480\"\n", 11) = 11
+[pid 13102] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13102] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13102] write(1, "\t\"640x480\"\n", 11) = 11
+[pid 13102] write(1, "\t\"720x400\"\n", 11) = 11
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_CREATE_DUMB, 0x7fce943628) = 0
+[pid 13102] write(1, "New buffer size (1920, 1080)\n", 29) = 29
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_ADDFB2, 0x7fce943298) = 0
+[pid 13102] write(1, "Using framebuffer::Handle(95)\n", 30) = 30
+[pid 13102] ioctl(7, DRM_IOCTL_PRIME_HANDLE_TO_FD, 0x7fce9436d0) = 0
+[pid 13102] write(1, "Buffer prime FD 8\n", 18) = 18
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_CREATE_DUMB, 0x7fce943628) = 0
+[pid 13102] write(1, "New buffer size (1920, 1080)\n", 29) = 29
+[pid 13102] ioctl(7, DRM_IOCTL_MODE_ADDFB2, 0x7fce943298) = 0
+[pid 13102] write(1, "Using framebuffer::Handle(99)\n", 30) = 30
+[pid 13102] ioctl(7, DRM_IOCTL_PRIME_HANDLE_TO_FD, 0x7fce9436d0) = 0
+[pid 13102] write(1, "Buffer prime FD 9\n", 18) = 18
+[pid 13102] openat(AT_FDCWD, "/dev/video10", O_RDWR|O_CLOEXEC) = 10
+[pid 13102] ioctl(10, VIDIOC_QUERYCAP, {driver="bcm2835-codec", card="bcm2835-codec-decode", bus_info="platform:bcm2835-codec", version=KERNEL_VERSION(5, 10, 31), capabilities=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING|V4L2_CAP_DEVICE_CAPS, device_caps=V4L2_CAP_VIDEO_M2M_MPLANE|V4L2_CAP_EXT_PIX_FORMAT|V4L2_CAP_STREAMING}) = 0
+[pid 13102] ioctl(10, VIDIOC_S_FMT, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, fmt.pix_mp={width=1920, height=1088, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_ANY, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=4177920, bytesperline=3840}], num_planes=1}} => {fmt.pix_mp={width=1920, height=1088, pixelformat=v4l2_fourcc('R', 'G', 'B', 'P') /* V4L2_PIX_FMT_RGB565 */, field=V4L2_FIELD_NONE, colorspace=V4L2_COLORSPACE_DEFAULT, plane_fmt=[{sizeimage=4177920, bytesperline=3840}], num_planes=1}}) = 0
+[pid 13102] ioctl(10, VIDIOC_REQBUFS, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, memory=V4L2_MEMORY_DMABUF, count=2 => 2}) = 0
+[pid 13102] close(10)                   = 0
+[pid 13102] ioctl(6, VIDIOC_STREAMON, [V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE]) = 0
+[pid 13102] ioctl(6, VIDIOC_STREAMON, [V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE]) = 0
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "227", 3227)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "&dmabufs", 8&dmabufs)     = 8
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "DmaBufHandle", 12DmaBufHandle) = 12
+[pid 13102] write(2, "(\n", 2(
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "File", 4File)         = 4
+[pid 13102] write(2, " {\n", 3 {
+)         = 3
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "fd", 2fd)           = 2
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "8", 18)            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] readlinkat(AT_FDCWD, "/proc/self/fd/8", "/dmabuf:", 256) = 8
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "path", 4path)         = 4
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "\"", 1")           = 1
+[pid 13102] write(2, "/", 1/)            = 1
+[pid 13102] write(2, "d", 1d)            = 1
+[pid 13102] write(2, "m", 1m)            = 1
+[pid 13102] write(2, "a", 1a)            = 1
+[pid 13102] write(2, "b", 1b)            = 1
+[pid 13102] write(2, "u", 1u)            = 1
+[pid 13102] write(2, "f", 1f)            = 1
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "\"", 1")           = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] fcntl(8, F_GETFL)           = 0 (flags O_RDONLY)
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "read", 4read)         = 4
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "true", 4true)         = 4
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "write", 5write)        = 5
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "false", 5false)        = 5
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "}", 1})            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, ")", 1))            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "]", 1])            = 1
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] statx(0, NULL, AT_STATX_SYNC_AS_STAT, STATX_ALL, NULL) = -1 EFAULT (Bad address)
+[pid 13102] statx(8, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=0600, stx_size=4407296, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, index=0, memory=V4L2_MEMORY_DMABUF, length=1, bytesused=0, flags=V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "34", 234)           = 2
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786397", 6786397)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786397, SEEK_CUR) = 35
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "35", 235)           = 2
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 34 bytes into buffer!\n", 27) = 27
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue output buffer:"..., 33Failed to dequeue output buffer: ) = 33
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "227", 3227)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "&dmabufs", 8&dmabufs)     = 8
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "DmaBufHandle", 12DmaBufHandle) = 12
+[pid 13102] write(2, "(\n", 2(
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "File", 4File)         = 4
+[pid 13102] write(2, " {\n", 3 {
+)         = 3
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "fd", 2fd)           = 2
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "9", 19)            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] readlinkat(AT_FDCWD, "/proc/self/fd/9", "/dmabuf:", 256) = 8
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "path", 4path)         = 4
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "\"", 1")           = 1
+[pid 13102] write(2, "/", 1/)            = 1
+[pid 13102] write(2, "d", 1d)            = 1
+[pid 13102] write(2, "m", 1m)            = 1
+[pid 13102] write(2, "a", 1a)            = 1
+[pid 13102] write(2, "b", 1b)            = 1
+[pid 13102] write(2, "u", 1u)            = 1
+[pid 13102] write(2, "f", 1f)            = 1
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "\"", 1")           = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] fcntl(9, F_GETFL)           = 0 (flags O_RDONLY)
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "read", 4read)         = 4
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "true", 4true)         = 4
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "write", 5write)        = 5
+[pid 13102] write(2, ": ", 2: )           = 2
+[pid 13102] write(2, "false", 5false)        = 5
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, "}", 1})            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "    ", 4    )         = 4
+[pid 13102] write(2, ")", 1))            = 1
+[pid 13102] write(2, ",\n", 2,
+)          = 2
+[pid 13102] write(2, "]", 1])            = 1
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=0600, stx_size=4407296, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE, index=1, memory=V4L2_MEMORY_DMABUF, length=1, bytesused=0, flags=V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "7396", 47396)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 786467
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786467", 6786467)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "779035", 6779035)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -779035, SEEK_CUR) = 7432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "7432", 47432)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 7396 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "3946", 43946)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 793864
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "793864", 6793864)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "782485", 6782485)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -782485, SEEK_CUR) = 11379
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "11379", 511379)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 3946 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "795", 3795)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 797811
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "797811", 6797811)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785636", 6785636)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785636, SEEK_CUR) = 12175
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "12175", 512175)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 795 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "184", 3184)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 798607
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "798607", 6798607)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786247", 6786247)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786247, SEEK_CUR) = 12360
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "12360", 512360)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 184 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "1071", 41071)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 798792
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "798792", 6798792)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785360", 6785360)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785360, SEEK_CUR) = 13432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "13432", 513432)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 1071 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "432", 3432)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 799864
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "799864", 6799864)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785999", 6785999)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785999, SEEK_CUR) = 13865
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "13865", 513865)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 432 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "1012", 41012)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 800297
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "800297", 6800297)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785419", 6785419)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785419, SEEK_CUR) = 14878
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "14878", 514878)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 1012 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "195", 3195)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 801310
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "801310", 6801310)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786236", 6786236)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786236, SEEK_CUR) = 15074
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "15074", 515074)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 195 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "546", 3546)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 801506
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "801506", 6801506)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785885", 6785885)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785885, SEEK_CUR) = 15621
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "15621", 515621)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 546 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "348", 3348)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 802053
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "802053", 6802053)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786083", 6786083)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786083, SEEK_CUR) = 15970
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "15970", 515970)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 348 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "1043", 41043)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 802402
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "802402", 6802402)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785388", 6785388)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785388, SEEK_CUR) = 17014
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "17014", 517014)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 1043 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "406", 3406)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 803446
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "803446", 6803446)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786025", 6786025)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786025, SEEK_CUR) = 17421
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "17421", 517421)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 406 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "174", 3174)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 803853
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "803853", 6803853)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786257", 6786257)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786257, SEEK_CUR) = 17596
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "17596", 517596)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 174 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "965", 3965)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 804028
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "804028", 6804028)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785466", 6785466)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785466, SEEK_CUR) = 18562
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "18562", 518562)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 965 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "178", 3178)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 804994
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "804994", 6804994)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786253", 6786253)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786253, SEEK_CUR) = 18741
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "18741", 518741)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 178 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "1048", 41048)         = 4
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 805173
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "805173", 6805173)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785383", 6785383)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785383, SEEK_CUR) = 19790
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "19790", 519790)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 1048 bytes into buffer!\n", 29) = 29
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "406", 3406)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 806222
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "806222", 6806222)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786025", 6786025)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -786025, SEEK_CUR) = 20197
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "20197", 520197)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 406 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "607", 3607)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 806629
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "806629", 6806629)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785824", 6785824)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785824, SEEK_CUR) = 20805
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "20805", 520805)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 607 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0xc0000) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_read", 10bytes_read)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "786432", 6786432)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "bytes_used", 10bytes_used)  = 10
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "945", 3945)          = 3
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, 0, SEEK_CUR)       = 807237
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "file.seek(SeekFrom::Current(0))?", 32file.seek(SeekFrom::Current(0))?) = 32
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "807237", 6807237)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "259", 3259)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "offset", 6offset)       = 6
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "785486", 6785486)       = 6
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] lseek(5, -785486, SEEK_CUR) = 21751
+[pid 13102] write(2, "[", 1[)            = 1
+[pid 13102] write(2, "src/main.rs", 11src/main.rs) = 11
+[pid 13102] write(2, ":", 1:)            = 1
+[pid 13102] write(2, "266", 3266)          = 3
+[pid 13102] write(2, "] ", 2] )           = 2
+[pid 13102] write(2, "new_position", 12new_position) = 12
+[pid 13102] write(2, " = ", 3 = )          = 3
+[pid 13102] write(2, "21751", 521751)        = 5
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] ioctl(6, VIDIOC_QBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=1, memory=V4L2_MEMORY_MMAP, m.offset=0xce9437b8, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_QUEUED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, ...}) = 0
+[pid 13102] write(1, "Read 945 bytes into buffer!\n", 28) = 28
+[pid 13102] munmap(0x7f9d69a000, 786432) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE, index=0, memory=V4L2_MEMORY_MMAP, m.offset=0xce942c00, length=1, bytesused=0, flags=V4L2_BUF_FLAG_MAPPED|V4L2_BUF_FLAG_TIMESTAMP_COPY|V4L2_BUF_FLAG_TSTAMP_SRC_EOF, timestamp={tv_sec=0, tv_usec=0}, ...}) = 0
+[pid 13102] ioctl(6, VIDIOC_DQBUF, {type=V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE}) = -1 EAGAIN (Resource temporarily unavailable)
+[pid 13102] write(2, "Failed to dequeue capture buffer"..., 34Failed to dequeue capture buffer: ) = 34
+[pid 13102] write(2, "NotReady", 8NotReady)     = 8
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] write(2, "Failed to obtain capture buffer:"..., 33Failed to obtain capture buffer: ) = 33
+[pid 13102] write(2, "NoFreeBuffer", 12NoFreeBuffer) = 12
+[pid 13102] write(2, "\n", 1
+)           = 1
+[pid 13102] mmap(NULL, 786432, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f9d69a000
+[pid 13102] read(5, 0x7f9d69a000, 786432) = 786432
+[pid 13102] --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+strace: Process 13102 detached
+strace: Process 13103 detached
+[src/main.rs:259] bytes_read = 786432
+[src/main.rs:259] bytes_used = 973
+[src/main.rs:259] file.seek(SeekFrom::Current(0))? = 808183
+[src/main.rs:259] offset = 785458
+[src/main.rs:266] new_position = 22725
+Failed to dequeue capture buffer: NotReady
