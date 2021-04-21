@@ -96,14 +96,6 @@ pub fn get_framebuffer(
     })
 }
 
-pub fn prime_fd_to_buffer(
-    card: &Card,
-    prime: RawFd
-) -> Result<framebuffer::Handle> {
-    let handle = card.prime_fd_to_buffer(prime)?;
-    Ok(handle)
-}
-
 pub fn set_crtc(
     card: &Card,
     framebuffer: Option<framebuffer::Handle>,
