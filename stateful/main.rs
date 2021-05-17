@@ -1,11 +1,14 @@
 use aho_corasick::AhoCorasick;
 use anyhow::{ensure, Result};
-use std::fs::File;
-use std::io::{Read, Seek, SeekFrom};
+use std::{io::{Read}, os::unix::prelude::AsRawFd};
 use std::path::Path;
 use std::sync::{
     atomic::{AtomicBool, AtomicUsize, Ordering},
     Arc,
+};
+use std::{
+    fs::File,
+    io::{BufRead, BufReader},
 };
 use v4l2r::{
     decoder::{
@@ -20,18 +23,22 @@ use v4l2r::{
     memory::{DmaBufHandle, DmaBufferHandles, MemoryType, MmapHandle},
     Format, QueueType, Rect,
 };
+use lazy_static::lazy_static;
 
 mod dmabuf;
 mod modesetting;
+
+type PooledDmaBufHandlesProvider = PooledHandlesProvider<Vec<DmaBufHandle<File>>>;
 
 const RENDER_DEVICE_PATH: &'static str = "/dev/dri/card0";
 const DECODE_DEVICE_PATH: &'static str = "/dev/video10";
 const VIDEO_FILE_PATH: &'static str = "/home/alarm/FPS_test_1080p60_L4.2.h264";
 const CAPTURE_MEM: MemoryType = MemoryType::DmaBuf;
 const NUM_OUTPUT_BUFFERS: usize = 2;
-// const NUM_CAPTURE_BUFFERS: usize = 2;
 
-type PooledDmaBufHandlesProvider = PooledHandlesProvider<Vec<DmaBufHandle<File>>>;
+lazy_static! {
+    static ref H264_AUD_PATTERN: AhoCorasick = AhoCorasick::new_auto_configured(&[[0, 0, 0, 1]]);
+}
 
 /// Run a sample encoder on device `device_path`, which must be a `vicodec`
 /// encoder instance. `lets_quit` will turn to true when Ctrl+C is pressed.
@@ -46,14 +53,14 @@ pub fn main() -> Result<()> {
         .expect("Failed to set Ctrl-C handler.");
     }
 
-    let h264_aud_pattern = AhoCorasick::new_auto_configured(&[[0, 0, 0, 1]]);
     let poll_count_reader = Arc::new(AtomicUsize::new(0));
     let poll_count_writer = Arc::clone(&poll_count_reader);
     let start_time = std::time::Instant::now();
     let mut frame_counter = 0usize;
     // Open file for reading
-    let mut file =
-        File::open(VIDEO_FILE_PATH).expect(&format!("Failed to load {}", VIDEO_FILE_PATH));
+    let mut file = BufReader::new(
+        File::open(VIDEO_FILE_PATH).expect(&format!("Failed to load {}", VIDEO_FILE_PATH)),
+    );
     let render_device = modesetting::Card::open(RENDER_DEVICE_PATH)
         .expect(&format!("Unable to open {}", RENDER_DEVICE_PATH));
 
@@ -92,7 +99,7 @@ pub fn main() -> Result<()> {
             DecoderEvent::EndOfStream => {
                 println!("End of stream!");
                 ()
-            },
+            }
         };
 
     let set_capture_format_cb =
@@ -146,7 +153,7 @@ pub fn main() -> Result<()> {
     let mut decoder = Decoder::open(&Path::new(&DECODE_DEVICE_PATH))
         .expect("Failed to open device")
         .set_output_format(|f| {
-            let format: Format = f.set_pixelformat(b"H264").set_size(1920, 1080).apply()?;
+            let format: Format = f.set_pixelformat(b"H264").set_size(640, 480).apply()?;
 
             ensure!(
                 format.pixelformat == b"H264".into(),
@@ -166,8 +173,8 @@ pub fn main() -> Result<()> {
 
     println!("Allocated {} buffers", decoder.num_output_buffers());
 
-    let mut total_read: usize = 0;
-    let file_size = file.metadata()?.len();
+    // Raspberry Pi requires that the capture queue must also be on to fire the resolution change event
+    v4l2r::ioctl::streamon(&File::open(DECODE_DEVICE_PATH)?.as_raw_fd(), v4l2r::QueueType::VideoCaptureMplane)?;
 
     loop {
         // Ctrl-c ?
@@ -190,22 +197,9 @@ pub fn main() -> Result<()> {
             .get_plane_mapping(0)
             .expect("Failed to get Mmap mapping");
 
-        let bytes_read = file.read(&mut mapping.data)?;
-        let mat = h264_aud_pattern
-            .find(&mapping.data[1..])
-            .expect("Failed to find AUD in file");
-        let bytes_used = mat.start() + 1;
-        total_read += bytes_used;
-        // mapping.data[bytes_used..].fill(0);
+        let bytes_used = read_next_aud(&mut file, &mut mapping.data)?;
 
-        let offset = bytes_read as i64 - bytes_used as i64;
-        let new_position = file.seek(SeekFrom::Current(-offset))?;
-        debug_assert_eq!(total_read, new_position as usize);
-
-        println!(
-            "Filled buffer with {} bytes, new_position: {}, len: {}, read: {}",
-            bytes_used, new_position, file_size, total_read
-        );
+        println!("Filled buffer with {} bytes", bytes_used);
         v4l2_buffer
             .queue(&[bytes_used])
             .expect("Failed to queue input frame");
@@ -216,4 +210,39 @@ pub fn main() -> Result<()> {
     println!();
 
     Ok(())
+}
+
+fn read_next_aud(file: &mut BufReader<File>, dst: &mut [u8]) -> Result<usize> {
+    let mut bytes_used = 0;
+
+    loop {
+        let buffer = file.fill_buf()?;
+        match H264_AUD_PATTERN.find(&buffer[1..]) {
+            Some(mat) => {
+                let dst_end = bytes_used + mat.start() + 1;
+                // println!("Read from {:x} to {:x}", bytes_used, dst_end);
+                file.read_exact(&mut dst[bytes_used..dst_end])?;
+                bytes_used += mat.start() + 1;
+                break;
+            }
+            None => {
+                let buffer_len = buffer.len();
+                let dst_end = bytes_used + buffer_len;
+                file.read_exact(&mut dst[bytes_used..dst_end])?;
+                bytes_used += buffer_len;
+            }
+        }
+    }
+
+    let buffer = file.fill_buf()?;
+    // The buffer we have filled should start with the aud pattern
+    debug_assert_eq!(&dst[..4], &[0, 0, 0, 1]);
+
+    // The buffer we will create next should start with the aud pattern
+    if !buffer.is_empty() {
+        debug_assert_eq!(&buffer[..4], &[0, 0, 0, 1]);
+    }
+    dbg!(&bytes_used);
+
+    Ok(bytes_used)
 }

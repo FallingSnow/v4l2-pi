@@ -1,10 +1,6 @@
 use anyhow::Result;
-use drm::{
-    buffer::{Buffer, DrmFourcc, Handle, PlanarBuffer},
-    control::{self, dumbbuffer::DumbBuffer, framebuffer, Mode},
-};
+use drm::{buffer::{Buffer, DrmFourcc, Handle, PlanarBuffer}, control::{Device, Mode, dumbbuffer::DumbBuffer, framebuffer}};
 use std::os::unix::io::RawFd;
-use std::os::unix::fs::OpenOptionsExt;
 
 /// A simple wrapper for a device node.
 #[derive(Debug)]
@@ -27,7 +23,6 @@ impl Card {
         let mut options = std::fs::OpenOptions::new();
         options.read(true);
         options.write(true);
-        options.custom_flags(libc::O_NONBLOCK);
         let card = Card(options.open(path)?);
         Ok(card)
     }
@@ -36,7 +31,6 @@ impl Card {
 pub struct PrimeFramebuffer {
     pub handle: framebuffer::Handle,
     pub prime: RawFd,
-    pub size: (u32, u32)
 }
 
 pub struct PlanarDumbBuffer(DumbBuffer);
@@ -74,30 +68,30 @@ pub fn get_framebuffer(
     mode: &Mode,
     _format: &v4l2r::Format,
 ) -> Result<PrimeFramebuffer> {
-    use control::Device;
 
     let pixel_format = DrmFourcc::Rgb565;
     // This should be 16 buf, but if we put 16 we get
     // videobuf2_common: [cap-0000000003662a70] __prepare_dmabuf: invalid dmabuf length 4149248 for plane 0, minimum length 4177920
     let bpp = 16;
     let dumb_buffer = card.create_dumb_buffer(
-        (mode.size().0.into(), mode.size().1 as u32 + (mode.size().1 as u32 % bpp as u32)),
+        (mode.size().0.into(), (mode.size().1 + 8).into()),
         pixel_format,
         bpp,
     )?;
-    let size = dumb_buffer.size();
+    println!("New buffer size {:?}", dumb_buffer.size());
     let planar_dumb_buffer = PlanarDumbBuffer::from(dumb_buffer);
 
     let framebuffer = card
         .add_planar_framebuffer(&planar_dumb_buffer, &[None, None, None, None], 0)
         .unwrap();
+    println!("Using {:?}", framebuffer);
 
     let prime_fd = card.buffer_to_prime_fd(dumb_buffer.handle(), 0)?;
+    println!("Buffer prime FD {:?}", &prime_fd);
 
     Ok(PrimeFramebuffer {
         handle: framebuffer,
         prime: prime_fd,
-        size
     })
 }
 
@@ -105,8 +99,7 @@ pub fn set_crtc(
     card: &Card,
     framebuffer: Option<framebuffer::Handle>,
     mode: Option<Mode>,
-) -> Result<control::crtc::Handle> {
-    use drm::control::Device;
+) -> Result<drm::control::crtc::Handle> {
     let resources = card.resource_handles()?;
     let connectors = resources.connectors();
     let connector_handle = connectors[0];
@@ -115,7 +108,7 @@ pub fn set_crtc(
     let encoder = card.get_encoder(curr_encoder)?;
 
     let crtc = encoder.crtc().unwrap();
-    println!("Using {:?}", crtc);
+    // println!("Using {:?}", crtc);
 
     card.set_crtc(crtc, framebuffer, (0, 0), &[connector_handle], mode)?;
 
@@ -123,7 +116,6 @@ pub fn set_crtc(
 }
 
 pub fn get_mode(card: &Card) -> Result<Mode> {
-    use drm::control::Device;
     let resources = card.resource_handles()?;
 
     let connectors = resources.connectors();

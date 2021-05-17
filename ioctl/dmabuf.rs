@@ -1,8 +1,13 @@
-use std::{fs::File, os::unix::io::{FromRawFd, RawFd}, path::Path};
+use std::{
+    collections::VecDeque,
+    fs::File,
+    os::unix::io::{FromRawFd, RawFd},
+    path::Path,
+};
 
 use v4l2r::{
     device::Device,
-    ioctl,
+    ioctl::{self},
     memory::{DmaBufHandle, MemoryType},
     Format, QueueType,
 };
@@ -14,7 +19,7 @@ pub fn register_dmabufs(
     queue: QueueType,
     format: &Format,
     file_descriptors: &[RawFd],
-) -> Result<Vec<Vec<DmaBufHandle<File>>>> {
+) -> Result<VecDeque<Vec<DmaBufHandle<File>>>> {
     let mut device = Device::open(device_path, Default::default())?;
 
     let set_format: Format = ioctl::s_fmt(&mut device, queue, format.clone()).unwrap();
@@ -35,7 +40,7 @@ pub fn register_dmabufs(
     .unwrap();
     assert_eq!(file_descriptors.len(), nb_buffers);
 
-    let fds: Vec<Vec<DmaBufHandle<File>>> = (0..nb_buffers)
+    let fds: VecDeque<Vec<DmaBufHandle<File>>> = (0..nb_buffers)
         .into_iter()
         .map(|buffer| {
             // let plane_buffers = [file_descriptors[buffer]];
@@ -51,7 +56,6 @@ pub fn register_dmabufs(
                     DmaBufHandle::from(buffer_file)
                 })
                 .collect()
-
         })
         .collect();
 

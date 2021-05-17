@@ -11,9 +11,16 @@ nix = "0.20.0"
 libc = "0.2.92"
 anyhow = "1.0.40"
 drm = { git = "https://github.com/Smithay/drm-rs", rev = "dc5c544762ba4cccfa3ee14e7f8dde6722ff4f97" }
+drm-ffi = { git = "https://github.com/Smithay/drm-rs", rev = "dc5c544762ba4cccfa3ee14e7f8dde6722ff4f97" }
 v4l2r = { git = "https://github.com/Gnurou/v4l2r.git", rev = "1fbc84fbe2ae9db970c41fbdb4537b3753d146e1" }
 ctrlc = "3.1.9"
 aho-corasick = "0.7.15"
+lazy_static = "1.4.0"
+tokio = { version = "1.6.0", features = ["net", "macros", "rt"]}
 
-# [profile.debug]
-# lto = false
+[dependencies.async-std]
+version = "1.9.0"
+features = ["attributes"]
+
+# [profile.realease]
+# lto = true
